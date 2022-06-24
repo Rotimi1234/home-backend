@@ -1,12 +1,18 @@
 module.exports = [
   'strapi::errors',
+  'strapi::security',
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
   'strapi::body',
+  'strapi::session',
   'strapi::favicon',
   'strapi::public',
+];
+
+module.exports = [
+  // ...
   {
     name: 'strapi::security',
     config: {
@@ -14,11 +20,12 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'storage.yandexcloud.net/strapi-static'],
-          'media-src': ["'self'", 'data:', 'blob:', 'storage.yandexcloud.net/strapi-static'],
+          'img-src': ["'self'", 'data:', 'blob:', 'dl.airtable.com', 'res.cloudinary.com'],
+          'media-src': ["'self'", 'data:', 'blob:', 'dl.airtable.com', 'res.cloudinary.com'],
           upgradeInsecureRequests: null,
         },
       },
     },
   },
+  // ...
 ];
