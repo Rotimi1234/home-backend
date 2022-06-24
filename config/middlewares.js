@@ -9,7 +9,7 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
-
+  'strapi::security',
   {
     name: 'strapi::security',
     config: {
