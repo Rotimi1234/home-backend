@@ -9,11 +9,7 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
-  'strapi::security',
-];
 
-module.exports = [
-  // ...
   {
     name: 'strapi::security',
     config: {
@@ -24,9 +20,8 @@ module.exports = [
           'img-src': ["'self'", 'data:', 'blob:', 'dl.airtable.com', 'res.cloudinary.com'],
           'media-src': ["'self'", 'data:', 'blob:', 'dl.airtable.com', 'res.cloudinary.com'],
           upgradeInsecureRequests: null,
-        },
-      },
-    },
+        }
+      }
+    }
   },
-  // ...
 ];
